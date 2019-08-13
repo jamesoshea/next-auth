@@ -1,8 +1,8 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('babel-polyfill'), require('isomorphic-fetch')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'babel-polyfill', 'isomorphic-fetch'], factory) :
-  (factory((global['next-auth-client'] = {}),null,global.fetch));
-}(this, (function (exports,babelPolyfill,fetch) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('isomorphic-fetch')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'isomorphic-fetch'], factory) :
+  (global = global || self, factory(global['next-auth-client'] = {}, global.fetch));
+}(this, function (exports, fetch) { 'use strict';
 
   fetch = fetch && fetch.hasOwnProperty('default') ? fetch['default'] : fetch;
 
@@ -487,4 +487,4 @@
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
-})));
+}));
